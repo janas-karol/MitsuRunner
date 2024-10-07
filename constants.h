@@ -41,26 +41,26 @@ const float TEMPERATURE_DELTA_DEFROSTING_STARTED = -4.0;
 
 /* When temperature delta has been over the threshold 
  * (TEMPERATURE_DELTA_TO_DEFROST) this long, defrosting is started. */
-#define TEMPERATURE_DELTA_EXCESS_TIME   8   /* minutes */
+#define TEMPERATURE_DELTA_EXCESS_TIME   10   /* minutes */
 
 /* When temperature delta has been over the threshold but delta temperature is decreasing 
  * This indicates that outdoor unit might be just changing it's fan speed which has temporarily raised temperature delta 
  * This timer time is waited more if temperature delta decreases back under treshold */
-#define TEMPERATURE_DELTA_DECREASING_EXCESS_TIME   5   /* minutes */
+#define TEMPERATURE_DELTA_DECREASING_EXCESS_TIME   8   /* minutes */
 
 /* When this time has been passed since last defrosting, 
  * forced defrosting will be started. */
-#define MAX_HEATING_TIME                180 /* minutes */
+#define MAX_HEATING_TIME                360 /* minutes */
 
 /* The minimum time between defrosting operations. */
-#define MIN_HEATING_TIME                50  /* minutes */
+#define MIN_HEATING_TIME                40  /* minutes */
 
 /* The time that the defrost hack relays is off after defrosting is started. */
-#define RELAY_OFF_TIME                  30  /* minutes */
+#define RELAY_OFF_TIME                  20  /* minutes */
 
 /* If defrosting is not started during this time after switching the relay off,
    state will be set back to IDLE instead of DEFROSTING STARTED */
-#define DEFROST_TIMEOUT                 10  /* minutes */
+#define DEFROST_TIMEOUT                 15  /* minutes */
 
 /* Delay at the reset before allowing state machine to step to next states 
  * Gives time for the sensors to be read*/
